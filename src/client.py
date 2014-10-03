@@ -7,9 +7,6 @@ class GraphiteClient(object):
 
     def run(self, query):
         # TODO: Raise exception on invalid result
-        print 'Query: ', query
         url = self.base_url + '/render?' + query
-        print 'Url: ', url
         ret = requests.get(url, verify=False)
-        print ret
         return ret.json()

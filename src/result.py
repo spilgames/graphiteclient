@@ -9,6 +9,11 @@ class GraphiteResult(object):
         else:
             self.sorted = sorted([float(x[0]) for x in self.datapoints if x[0]])
 
+    def __repr__(self):
+        return unicode(self)
+
+    def __unicode__(self):
+        return '<GraphiteResult: {0}>'.format(self.target)
 
     @property
     def avg(self):
@@ -51,6 +56,10 @@ class GraphiteResultSet(object):
 
     def __getitem__(self, k):
         return self.results[k]
+
+    def __iter__(self):
+        for k, v in self.results.iteritems():
+            yield v
 
     def __repr__(self):
         return unicode(self)

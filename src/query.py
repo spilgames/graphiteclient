@@ -23,11 +23,13 @@ class GraphiteQuery(object):
     targets = []
     zero_missing = False
 
-    def __init__(self, client=None, base_url=None, **kwargs):
+    def __init__(self, client=None, base_url=None, zero_missing=False, **kwargs):
         if not client:
             self.client = GraphiteClient(base_url)
         else:
             self.client = client
+
+        self.zero_missing = zero_missing
         self.attrs.update(kwargs)
 
     def build_query(self):
