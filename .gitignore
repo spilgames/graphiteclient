@@ -1,0 +1,67 @@
+# Compiled python files
+*.py[co]
+
+# whoosh
+whoosh_index
+whoosh
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+var
+sdist
+develop-eggs
+.installed.cfg
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+.cache
+
+#Translations
+*.mo
+
+#Mr Developer
+.mr.developer.cfg
+
+
+# Packages
+*.tar
+*.gz
+*.rpm
+*.zip
+
+# Temporary files
+*~
+*.swp
+INC/.zcompdump
+
+# OS generated files #
+######################
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Eclipse / PyDev
+.project
+.pydevproject
+.settings
+
+results
+*.out
+*.xml
+dev.db
+test.db
+
+.*_done
+.htmlcov
+*.keytab
+.vagrant
