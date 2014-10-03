@@ -3,7 +3,7 @@ from result import GraphiteResultSet
 
 
 class GraphiteQueryTarget(object):
-    '''Represents a single graphite target (target=<something>'''
+    '''Represents a single graphite target (target=<something>)'''
 
     def __init__(self, query, name=None, color=None):
         self.query = query
