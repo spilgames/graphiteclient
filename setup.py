@@ -14,8 +14,9 @@ if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload')
     sys.exit()
 
-readme = open('README.rst').read()
-history = open('HISTORY.rst').read().replace('.. :changelog:', '')
+readme = open('README.md').read()
+history = """ This is kinda new """
+# open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
     name='graphiteclient',
@@ -28,7 +29,7 @@ setup(
     packages=[
         'graphiteclient',
     ],
-    package_dir={'graphiteclient': 'graphiteclient'},
+    package_dir={'graphiteclient': 'src'},
     include_package_data=True,
     install_requires=[
     ],
