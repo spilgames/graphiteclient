@@ -15,6 +15,10 @@ class GraphiteResult(object):
     def __unicode__(self):
         return '<GraphiteResult: {0}>'.format(self.target)
 
+    def __iter__(self):
+        for v, ts in self.datapoints:
+            yield v
+
     @property
     def avg(self):
         return sum(self.sorted) / len(self.sorted)

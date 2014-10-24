@@ -43,7 +43,7 @@ class GraphiteQuery(object):
         self.targets.append(GraphiteQueryTarget(*args, **kwargs))
 
     def run(self):
-        self.attrs['format'] = 'json'
+        self.attrs['format'] = 'json'  # TODO: find a proper solution for this
         self.result = GraphiteResultSet(self.client.run(self.build_query()), self)
         return self.result
 
